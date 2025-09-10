@@ -1,33 +1,127 @@
-* {
-    font-size: 16px
-}
 
 .box {
-    border: 10px solid red;
     width: 100%;
-    height: 50px; 
-
-}
-
-.ada {
-    font-size: 2rem;
-
-}
-
-ul {
+    height: 50px;
     display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right;
 }
 
-ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: 1.25rem;
+.box .left {
+    width: 65%;
+    font-size: 1.5rem;
+    display: flex;
     text-align: center;
-    vertical-align: middle;
+    justify-content: left;
+    align-items: center;
+    font-weight: bold;
+
+}
+
+.box .right {
+    width: 35%;
+    display: flex;
+    text-align: right;
+    justify-content: right;
+    align-items: center;
+}
+
+.box .right ul {
+    list-style-type: none;
+    display: flex;   
+}
+
+.box .right ul li {
     padding: 10px;
-    font-weight: none !important;
+}
+
+.box .right ul li a {
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 1.25rem;
+    color: black;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 10px;
+}
+
+p {
+    color: black;
+    font-size: 1.42rem;
+    font-weight: normal;
+    display: flex;
+}
+
+.about-me-box {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.about-me-textbox {
+    width: 60%;
+    height: 500px;
+    justify-content: left;
+    display: flex;
+    float: left;
+    margin: 10px;
+}
+
+.about-me-imagebox {
+    width: 38%;
+    height: 400px;
+    justify-content: right;
+    display: flex;
+}
+
+h3 img {
+    padding-left: 10px; 
+    padding-right: 5px;
+}
+
+.projects {
+    line-height: 0;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+button {
+    background-color: white;
+    border: none;
+}
+
+.skills {
+    height: 50px;
+    margin-bottom: 150px
+}
+
+.skills-logo {
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.skills-logo img {
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    justify-content: space-evenly;
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+footer img {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+    justify-items: center;
 }
