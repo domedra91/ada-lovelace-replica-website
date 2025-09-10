@@ -83,13 +83,18 @@ h3 img {
     line-height: 0;
 }
 
-h3 {
-    font-size: 18px;
+.projects img .hidden-photo {
+
 }
 
-button {
-    background-color: white;
-    border: none;
+.projects p {
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 18px;
 }
 
 .skills {
@@ -125,3 +130,5 @@ footer img {
     font-size: 20px;
     justify-items: center;
 }
+
+#theImage { display:none; }
