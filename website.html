@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<document>
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
         <title>Ada Lovelace Replica Page</title>
     </head>
 
-    <nav class="box">
+    <body>
+        <div class="container">
+
+        <nav class="box">
         <div class="left"><h1>Ada Lovelace</h1></div>
         <div class="right">
             <ul>
                 <li><a href="#">About Me</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Skills</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="./contact.html">Contact</a></li>
             </ul>
         </div>
     </nav>
+    
 
 
-    <body>
         <div class="about-me-box">
             <h1>About Me</strong><br>
         <div class="about-me-textbox"><p>Hi! I'm Ada, Countess of Lovelace and am an English mathematician and writer, chiefly known for my work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine.<br><br>
@@ -30,21 +32,50 @@
         </div>
         </div>    
       
-       
-        <h1><strong>Projects</strong></h1>
+        <h1 class="projectH1">Projects</h1>
         <div class="projects">
-        
-        <h3><img src="right-arrow.svg" alt="right-arrow bullet">The first computer program</h3>
-        <img class="hidden-photo" src="bernoulli.jpg"><p>The world's first computer program for computing Bernoulli numbers.</p>
-        <h3><img src="right-arrow.svg" alt="right-arrow bullet">The Analytical Engine</h3>
-         <img class="hidden-photo" src="machine.jpeg"><p>I helped Charles Babbage on topics ranging from math to computation that helped the development of the Analytical Engine.</p>
-        <h3><img src="right-arrow.svg" alt="right-arrow bullet">The Ada programming language</h3>
-         <img class="hidden-photo" src="ada-mascot.jpeg" alt="ada mascot"><p>My work inspired the United States Department of Defense to name their new programming language after me.</p><br><br>
+
+            <ul>
+                <li>
+                    <div class="project-title">
+                    <img src="right-arrow.svg" alt="right-arrow bullet">
+                    <h3>The first computer program</h3>
+                    </div>
+                    <div class="toHide">
+                        <img class="hidden-photo" src="bernoulli.jpg" alt="first computer">
+                        <p>The world's first computer program for computing Bernoulli numbers.</p>
+                    </div>
+                </li>
+
+                
+                <li>
+                    <div class="project-title">
+                    <img src="right-arrow.svg" alt="right-arrow bullet">
+                    <h3>The Analytical Engine</h3></div>
+                    <div class="toHide">
+                        <img class="hidden-photo" src="machine.jpeg" alt="machine">
+                        <p>I helped Charles Babbage on topics ranging from math to computation that helped the development of the Analytical Engine.</p>
+                    </div> 
+                </li>
+
+
+                <li>
+                    <div class="project-title">
+                    <img src="right-arrow.svg" alt="right-arrow bullet">
+                    <h3>The ADA programming language</h3></div>
+                    <div class="toHide">
+                        <img class="hidden-photo" src="ada-mascot.jpeg" alt="ada mascot">
+                        <p>My work inspired the United States Department of Defense to name their new programming language after me.</p>
+                    </div>
+                </li>
+
+            </ul>
+        </div>                   
         </div>
 
 
 
-        <h1><strong>Skills</strong></h1>
+        <h1 class="skillstext">Skills</h1>
         <div class="skills">
             <div class="skills-logo">
                 <img src="html5.svg">
@@ -64,15 +95,25 @@
             </div>
         </div>
 
+<script>
+
+        const titles = document.querySelectorAll('.project-title');
+for (let title of titles) {
+  title.addEventListener('click', function() {
+    const hidden = this.nextElementSibling;
+    if (!hidden) return;
+    const isVisible = window.getComputedStyle(hidden).display === 'block';
+    hidden.style.display = isVisible ? 'none' : 'block';
+  });
+}
 
 
+</script>
 
-
-
+  <footer>Made with 
+        <img src="red-heart.jpg"> in London</footer>
+    </div>
 
     </body>
 
-    <footer>Made with 
-        <img src="red-heart.jpg"> in London</footer>
 </html>
-</document>

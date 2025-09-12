@@ -1,3 +1,16 @@
+body {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
 
 .box {
     width: 100%;
@@ -13,7 +26,6 @@
     justify-content: left;
     align-items: center;
     font-weight: bold;
-
 }
 
 .box .right {
@@ -59,7 +71,7 @@ p {
 }
 
 .about-me-textbox {
-    width: 60%;
+    width: 50%;
     height: 500px;
     justify-content: left;
     display: flex;
@@ -68,10 +80,18 @@ p {
 }
 
 .about-me-imagebox {
-    width: 38%;
+    padding-left: 35px; 
+    width: 45%;
     height: 400px;
     justify-content: right;
     display: flex;
+}
+
+h1.projectH1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 h3 img {
@@ -79,13 +99,46 @@ h3 img {
     padding-right: 5px;
 }
 
-.projects {
-    line-height: 0;
+.projects ul li {
+    list-style-type: none;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
-.projects img .hidden-photo {
-
+.projects ul li img {
+    display: flex;
 }
+
+.projects ul li h3 {
+    padding: 5px;
+}
+
+.projects ul li h3 a {
+    text-decoration: none;
+    color: black;
+}
+
+.project-title {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toHide {
+    display: none;
+}
+
+.project-title img {
+    margin-right: 8px;
+}
+
+
+
+.projects .hidden-photo {
+    width: 435px;
+ }
 
 .projects p {
     color: black;
@@ -102,12 +155,24 @@ h3 {
     margin-bottom: 150px
 }
 
+h1.skillstext {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 40px;
+}
+
 .skills-logo {
   display: flex; 
   align-items: center; 
   flex-wrap: wrap; 
   justify-content: space-evenly;
   gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .skills-logo img {
@@ -129,6 +194,53 @@ footer img {
     width: 20px;
     font-size: 20px;
     justify-items: center;
+    padding-bottom: 10px;
 }
 
-#theImage { display:none; }
+.social-icons {
+    text-align: center;
+    display: flex;
+    justify-content: left;
+    font-size: 18px;
+    height: 40px;   
+    padding: 20px; 
+    gap: 20px; 
+}
+
+.social-icons img {
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    justify-items: center;
+}
+
+.social-text {
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    max-width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .about-me-box,
+  .about-me-textbox {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .about-me-imagebox {
+    width: 100%;
+    height: auto;
+  }
+  .skills-logo {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .projects .hidden-photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
